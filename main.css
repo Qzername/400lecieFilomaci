@@ -1,7 +1,10 @@
 body{
-    background-color: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-image: url("design.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img{
