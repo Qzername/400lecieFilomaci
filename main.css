@@ -1,12 +1,9 @@
 body{
-    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    background-image: url("design.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
 }
 
-img{
-    width: 100%;
+#header
+{
+    box-shadow: 0 0 0 black, 0 0 0 black, 0 -2px 35px black;
 }
