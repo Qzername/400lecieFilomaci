@@ -9,12 +9,28 @@
     </head>
     <body>
         <div class="container-fluid p-2 shadow">
-            <h1 class="d-inline-block">
-                400 lecie
-            </h1>
-            <div class="d-inline-block">
-                ...śladami Filomatów w Chojnicach
+            <div class="d-flex align-items-center">
+                <h1 class="p-2">
+                    400 lecie
+                </h1>
 
+                <div class="p-2 flex-grow-1">
+                    ...śladami Filomatów w Chojnicach
+                </div>
+
+                <div class="p-2">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Przycisk</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">400 lecie</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            Offcanvas description test
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
