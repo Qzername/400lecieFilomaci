@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{76A4BD12-DB69-4B8C-877F-1C4280C448F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdtFileConverter", "OdtFileConverter\OdtFileConverter.csproj", "{ACCC48DA-02B5-42B8-A083-A0F2A11F0E24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76A4BD12-DB69-4B8C-877F-1C4280C448F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A4BD12-DB69-4B8C-877F-1C4280C448F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A4BD12-DB69-4B8C-877F-1C4280C448F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A4BD12-DB69-4B8C-877F-1C4280C448F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACCC48DA-02B5-42B8-A083-A0F2A11F0E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCC48DA-02B5-42B8-A083-A0F2A11F0E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCC48DA-02B5-42B8-A083-A0F2A11F0E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCC48DA-02B5-42B8-A083-A0F2A11F0E24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D79F6DBE-55F6-489A-8A14-04C6221B34D5}
+	EndGlobalSection
+EndGlobal
