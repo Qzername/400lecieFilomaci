@@ -1,0 +1,12 @@
+.gradient {
+    background: #981ceb;
+    background: linear-gradient(135deg, #6211cc, #311ceb); /* kolory tymczasowe */
+}
+
+.card {
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
