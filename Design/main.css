@@ -24,11 +24,11 @@
     background: linear-gradient(135deg, #6211cc, #311ceb); kolory tymczasowe */
 }
 
-.card {
+.custom-card {
     transition: transform 0.25s;
 }
 
-.card:hover {
+.custom-card:hover {
     transition: transform 0.25s;
     transform: scale(1.025);
 }

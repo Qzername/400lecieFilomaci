@@ -35,8 +35,68 @@
                                 </div>
         
                                 <div class="offcanvas-body">
-                                    Wkleic tutaj listę, która ma hyperlinki do nauczycieli, miejsc, wydarzeń itd.<br>
-                                    zróbcie to jak ma mniej wiecej to wyglądać abym mogł styl przekopiować
+                                    <ol class="list-group list-group-numbered">
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#NauczycieleCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Nauczyciele</div>
+                                                    Zobacz listę nauczycieli
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE NAUCZYCIELI -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="NauczycieleCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">Kacper Dorawa</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Pan od Fizyki (Giga chad)</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#MiejscaCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Miejsca</div>
+                                                    Zobacz listę miejsc
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE MIEJSC -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="MiejscaCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">MacDonalds</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">KFC</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Knajpa u Dorawy</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#WydarzeniaCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Wydarzenia</div>
+                                                    Zobacz listę wydarzeń
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE WYDARZEN -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="WydarzeniaCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">Wyścigi taczek</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Chlanie u Dorawy</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +105,7 @@
 
                 <div class="container-fluid p-4 m-auto">
                     <div class="row d-flex justify-content-center align-content-center">
-                        <div class="card m-4 p-0" style="width: 18rem;">
+                        <div class="card custom-card m-4 p-0" style="width: 18rem;">
                             <img src="1.jpg" class="card-img-top" width="286" height="190">
                             <div class="card-body">
                                 <h5 class="card-title">Nauczyciele</h5>
@@ -58,7 +118,7 @@
                               </div>
                         </div>
             
-                        <div class="card m-4 p-0" style="width: 18rem;">
+                        <div class="card custom-card m-4 p-0" style="width: 18rem;">
                             <img src="2.jpg" class="card-img-top" width="286" height="190">
                             <div class="card-body">
                                 <h5 class="card-title">Miejsca</h5>
@@ -71,7 +131,7 @@
                             </div>
                         </div>
             
-                        <div class="card m-4 p-0" style="width: 18rem;">
+                        <div class="card custom-card m-4 p-0" style="width: 18rem;">
                             <img src="3.jpg" class="card-img-top" width="286" height="190">
                             <div class="card-body">
                                 <h5 class="card-title">Wydarzenia</h5>
