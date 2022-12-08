@@ -4,6 +4,6 @@ namespace Server.Models
 {
     public class ViewModelBase
     {
-        public string[] Persons => Database.Persons;
+        public string[] Persons => Database.GetPersonsNames();
     }
 }
