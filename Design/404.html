@@ -15,7 +15,9 @@
             <div class="d-flex flex-column h-100">
                 <div class="container-fluid p-2 shadow custom-background">
                     <div class="d-flex align-items-center">
-                        <img src="logo.png" class="p-2" width="208" height="64">
+                        <a href="/">
+                            <img src="logo.png" class="p-2" width="208" height="64">
+                        </a>
         
                         <div class="p-2 fs-5 text-white d-none d-sm-none d-md-block">
                             ...śladami Filomatów w Chojnicach
@@ -35,8 +37,68 @@
                                 </div>
         
                                 <div class="offcanvas-body">
-                                    Wkleic tutaj listę, która ma hyperlinki do nauczycieli, miejsc, wydarzeń itd.<br>
-                                    zróbcie to jak ma mniej wiecej to wyglądać abym mogł styl przekopiować
+                                    <ol class="list-group list-group-numbered">
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#NauczycieleCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Nauczyciele</div>
+                                                    Zobacz listę nauczycieli
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE NAUCZYCIELI -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="NauczycieleCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">Kacper Dorawa</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Pan od Fizyki (Giga chad)</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#MiejscaCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Miejsca</div>
+                                                    Zobacz listę miejsc
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE MIEJSC -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="MiejscaCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">McDonald's</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">KFC</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Knajpa u Dorawy</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a class="rounded text-decoration-none py-2" data-bs-toggle="collapse" href="#WydarzeniaCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Wydarzenia</div>
+                                                    Zobacz listę wydarzeń
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill"></span>
+                                                <!-- WKLEJ W SPANA LICZBE WYDARZEN -->
+                                            </li>
+                                        </a>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse rounded" id="WydarzeniaCollapse">
+                                                    <button type="button" class="list-group-item list-group-item-action">Wyścigi taczek</button>
+                                                    <button type="button" class="list-group-item list-group-item-action">Chlanie u Dorawy</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
