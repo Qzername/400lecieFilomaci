@@ -23,10 +23,10 @@ namespace Server.Controllers
             return View(new PersonViewModel(name, text));
         }
 
-        [HttpGet("[action]/{category}/{person}")]
-        public IActionResult List(string category, string person)
+        [HttpGet("[action]/{category}")]
+        public IActionResult List(string category)
         {
-            return View();
+            return View(new ListViewModel(category));
         }
     }
 }

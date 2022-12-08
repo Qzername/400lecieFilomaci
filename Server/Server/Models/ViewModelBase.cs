@@ -1,9 +1,10 @@
 ﻿using Server.Code;
+using Server.Models.Data;
 
 namespace Server.Models
 {
     public class ViewModelBase
     {
-        public string[] Persons => Database.GetPersonsNames();
+        public Dictionary<string,string[]> Persons => Database.GetCategoryAndPersons();
     }
 }
