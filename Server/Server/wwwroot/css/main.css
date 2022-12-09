@@ -19,6 +19,7 @@
 .custom-background {
     background: #003f8f;
     background: linear-gradient(#003f8f, #003f8f);
+
     /* background: #981ceb;
     background: linear-gradient(135deg, #6211cc, #311ceb); kolory tymczasowe */
 }
