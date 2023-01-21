@@ -28,5 +28,11 @@ namespace Server.Controllers
         {
             return View(new ListViewModel(category));
         }
+
+        [HttpGet("[action]")]
+        public IActionResult Map()
+        {
+            return View(new MapViewModel());
+        }
     }
 }
