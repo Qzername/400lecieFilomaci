@@ -31,3 +31,6 @@ Sad.bindPopup("<b>Sąd w Chojnicach</b><br><a href=\"/Person/Sąd%20w%20Chojnica
 
 var Jezuici = L.marker([53.69563, 17.56363]).addTo(map);
 Jezuici.bindPopup("<b>Jezuici w Chojnicach</b><br><a href=\"/Person/Jezuici%20w%20Chojnicach\">Zobacz więcej...</a>").openPopup();
+
+var Hipolit = L.marker([53.6943, 17.56412]).addTo(map);
+Hipolit.bindPopup("<b>Mieszkanie Hipolita Ostoja-Lniskiego</b><br><a href=\"/Person/Mieszkanie%20Hipolita%20Ostoja-Lniskiego\">Zobacz więcej...</a>").openPopup();
