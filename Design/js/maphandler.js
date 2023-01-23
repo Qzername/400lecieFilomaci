@@ -34,3 +34,15 @@ Jezuici.bindPopup("<b>Jezuici w Chojnicach</b><br><a href=\"/Person/Jezuici%20w%
 
 var Hipolit = L.marker([53.6943, 17.56412]).addTo(map);
 Hipolit.bindPopup("<b>Mieszkanie Hipolita Ostoja-Lniskiego</b><br><a href=\"/Person/Mieszkanie%20Hipolita%20Ostoja-Lniskiego\">Zobacz więcej...</a>").openPopup();
+
+var Hoffman = L.marker([53.69468, 17.55151]).addTo(map);
+Hoffman.bindPopup("<b>Mieszkanie Heleny i Bogumiła Hoffmann</b>").openPopup();
+
+var Lukowicz = L.marker([53.69105, 17.57024]).addTo(map);
+Lukowicz.bindPopup("<b>Mieszkanie Jana Pawła i Jana Karola Łukowicz</b>").openPopup();
+
+var Bieszkowie = L.marker([53.68958, 17.57432]).addTo(map);
+Bieszkowie.bindPopup("<b>Mieszkanie Bieszków</b>").openPopup();
+
+var Ceynowy = L.marker([53.7048, 17.5673]).addTo(map);
+Ceynowy.bindPopup("<b>Pomnik Floriana Ceynowy</b>").openPopup();
