@@ -42,7 +42,10 @@ var Lukowicz = L.marker([53.69105, 17.57024]).addTo(map);
 Lukowicz.bindPopup("<b>Mieszkanie Jana Pawła i Jana Karola Łukowicz</b><br><a href=\"/Person/Jan%20Paweł%20Łukowicz\">Zobacz więcej o Janie Pawle Łukowiczu...</a><br><a href=\"/Person/Jan%20Karol%20Łukowicz\">Zobacz więcej o Janie Karolu Łukowiczu...</a>").openPopup();
 
 var Bieszkowie = L.marker([53.68958, 17.57432]).addTo(map);
-Bieszkowie.bindPopup("<b>Mieszkanie Bieszków</b>").openPopup();
+Bieszkowie.bindPopup("<b>Mieszkanie Bieszków</b><br><a href=\"/Person/Stefan%20Bieszk\">Zobacz więcej...</a>").openPopup();
 
 var Ceynowy = L.marker([53.7048, 17.5673]).addTo(map);
 Ceynowy.bindPopup("<b>Pomnik Floriana Ceynowy</b><br><a href=\"/Person/Florian%20Ceynowa\">Zobacz więcej...</a>").openPopup();
+
+var Wagner = L.marker([53.69705, 17.56038]).addTo(map);
+Wagner.bindPopup("<b>Mieszkanie Leona Wagnera</b><br><a href=\"/Person/Leon%20Wagner\">Zobacz więcej...</a>").openPopup();
