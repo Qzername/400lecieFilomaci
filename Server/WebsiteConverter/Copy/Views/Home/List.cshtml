@@ -1,0 +1,21 @@
+﻿<div class="container-fluid p-4 m-auto">
+	<div class="row d-flex justify-content-center align-content-center">
+		@foreach(string name in Model.Persons[Model.CategoryName])
+		{
+			<div class="card custom-card m-4 p-0" style="width: 18rem;">
+				<img src="/img/PersonImg/@name/profilePicture.jpg" class="card-img-top" width="286" height="190">
+				<div class="card-body">
+					<h5 class="card-title">@name</h5>
+					<br/>
+					<div class="text-center">
+						<a asp-area="" asp-controller="Home" asp-action="Person" asp-route-name="@name" class="btn text-white custom-background">Zobacz więcej</a>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+
+<p class="text-center m-0 pb-2">
+	© 2022 - <script>document.write(new Date().getFullYear());</script> | Developed by Hubert Szymik, Gracjan Statkiewicz & Filip Kiedrowski
+</p>

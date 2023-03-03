@@ -1,0 +1,21 @@
+﻿<div class="container-fluid p-4 m-auto">
+	<div class="card p-4">
+		<div>
+			<div class="d-flex flex-column mx-auto">
+				<img src="/img/PersonImg/@Model.PersonName/profilePicture.jpg" class="rounded m-2 w-50 align-self-center" style="max-width: 250px;">
+
+				<h class="fw-bold fs-1 text-center w-100 p-2">
+					@Model.PersonName
+				</h>
+			</div>
+
+			<div class="fs-5 p-2 d-flex flex-column">
+				@Html.Raw(Model.Text)
+			</div>
+		</div>
+	</div>
+</div>
+
+<p class="text-center m-0 pb-2">
+	© 2022 - <script>document.write(new Date().getFullYear());</script> | Developed by Hubert Szymik, Gracjan Statkiewicz & Filip Kiedrowski
+</p>
