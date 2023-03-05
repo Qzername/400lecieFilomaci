@@ -23,14 +23,19 @@ public class Program
         foreach (var category in categories) 
             foreach(var person in category.Value)
                 DownloadPage($"http://20.25.191.186:5000/Person/{person}");
+
+        //special case
+        string css = File.ReadAllText("./Final/css/main.css");
+        css = css.Replace("url(\"/img/2.jpg\");", "url(\"../img/2.jpg\");");
+        File.WriteAllText("./Final/css/main.css", css);
+
+
     }
 
     static void DownloadPage(string url)
     {
         var response = client.GetAsync(url).Result;
         string result = response.Content.ReadAsStringAsync().Result;
-
-        result = result.Replace("<link rel=\"stylesheet\" href=\"/css/main.css\">", "<link rel=\"stylesheet\" href=\"./css/main.css\">");
 
         url = url.Remove(0, "http://20.25.191.186:5000".Length);
 
@@ -39,6 +44,17 @@ public class Program
 
         url = url.Replace("%20", " ");
         url += ".html";
+
+        string folderRecap = string.Empty;
+
+        for (int i = 0; i < url.Count(x => x == '/')-1; i++)
+            folderRecap += "../";
+
+        result = result.Replace("src=\"/", "src=\"./" + folderRecap);
+        result = result.Replace("href=\"/", "href=\"./" + folderRecap);
+        result = result.Replace("\">\r\n                            <img", $"Index.html\">\r\n                            <img");
+        result = result.Replace("\">Zobacz więcej", ".html\">Zobacz więcej");
+        result = result.Replace("\">\r\n                                                                <button", ".html\">\r\n                                                                <button");
 
         Directory.CreateDirectory("./Final/" + Path.GetDirectoryName(url));
         File.WriteAllText("./Final/" + url, result);
