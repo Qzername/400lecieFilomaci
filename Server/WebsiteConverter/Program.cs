@@ -28,8 +28,6 @@ public class Program
         string css = File.ReadAllText("./Final/css/main.css");
         css = css.Replace("url(\"/img/2.jpg\");", "url(\"../img/2.jpg\");");
         File.WriteAllText("./Final/css/main.css", css);
-
-
     }
 
     static void DownloadPage(string url)
@@ -40,7 +38,7 @@ public class Program
         url = url.Remove(0, "http://20.25.191.186:5000".Length);
 
         if (url == "/")
-            url = "/Index";
+            url = "/index";
 
         url = url.Replace("%20", " ");
         url += ".html";
@@ -52,12 +50,14 @@ public class Program
 
         result = result.Replace("src=\"/", "src=\"./" + folderRecap);
         result = result.Replace("href=\"/", "href=\"./" + folderRecap);
-        result = result.Replace("\">\r\n                            <img", $"Index.html\">\r\n                            <img");
+        result = result.Replace("<head>", "<head>\r\n        <meta charset=\"UTF-8\">");
+        //result = result.Replace("\">\r\n                            <img", $"Index.html\">\r\n                            <img");
         result = result.Replace("\">Zobacz więcej", ".html\">Zobacz więcej");
         result = result.Replace("\">\r\n                                                                <button", ".html\">\r\n                                                                <button");
 
         Directory.CreateDirectory("./Final/" + Path.GetDirectoryName(url));
         File.WriteAllText("./Final/" + url, result);
+        File.Delete("./Final/favicon.ico");
 
         Console.WriteLine(url);
     }
