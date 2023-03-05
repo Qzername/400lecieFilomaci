@@ -9,12 +9,14 @@ namespace Server.Models.Data
         public string ShortText;
         public string LongText;
 
+        static string dir = Directory.Exists("./Data/") ? "./Data/" : "./Copy/Data/";
+
         public Person(string name, string category)
         {
             Name = name;
             Category = category;
 
-            string[] files = Directory.GetFiles($"./Data/{category}/{name}/");
+            string[] files = Directory.GetFiles($"{dir}{category}/{name}/");
 
             LongText = File.ReadAllText(files[0]);
 

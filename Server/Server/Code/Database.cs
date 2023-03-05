@@ -18,12 +18,19 @@ namespace Server.Code
             '/'
         };
 
+        static string dir;
+
         static Database()
         {
             List<Person> personsList = new List<Person>();
             PersonsDictionary = new Dictionary<string, string[]>();
 
-            foreach (string categoryPath in Directory.GetDirectories("./Data/"))
+            dir = "./Data/";
+
+            if (!Directory.Exists(dir))
+                dir = "./Copy/Data/";
+
+            foreach (string categoryPath in Directory.GetDirectories(dir))
             {
                 string categoryName = categoryPath.Split(splitChars)[^1];
                 List<string> persons = new List<string>();
@@ -32,14 +39,11 @@ namespace Server.Code
                 {
                     string[] rawData = path.Split(splitChars);
                     string personName = rawData[^1];
-
                     personsList.Add(new Person(personName, categoryName));
                     persons.Add(personName);
                 }
-
                 PersonsDictionary.Add(categoryName, persons.ToArray());
             }
-                
 
             Persons = personsList.ToArray();
         }
@@ -56,6 +60,6 @@ namespace Server.Code
 
         public static Person[] GetPersons() => Persons;
 
-        public static Dictionary<string, string[]> GetCategoryAndPersons() => PersonsDictionary;
+        public static Dictionary<string, string[]> GetCategoryAndPersons() => PersonsDictionary;    
     }
 }

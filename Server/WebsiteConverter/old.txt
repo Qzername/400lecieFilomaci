@@ -1,0 +1,95 @@
+﻿using Server.Code;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+public class Program
+{
+    static Regex regex = new Regex("[\\(].[^)]*[\\)]", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+    public static void Main()
+    {
+        Console.WriteLine("Website Converter");
+
+        Console.WriteLine("Setting up main layout");
+        
+        string mainLayout = File.ReadAllText("./Copy/Views/Shared/Layout.cshtml");
+        var results = regex.Matches(mainLayout);
+
+        Console.WriteLine(results.Count);
+
+        var categories = Database.GetCategoryAndPersons();
+
+        string final = string.Empty;
+
+        mainLayout = mainLayout.Replace("<link rel=\"stylesheet\" href=\"/css/main.css\">", "<link rel=\"stylesheet\" href=\"./css/main.css\">");
+
+        foreach(KeyValuePair<string, string[]> category in categories)
+        {
+            string persons = string.Empty;
+
+            foreach(string person in category.Value)
+            {
+                persons += @$"<a class=""nav-link text-dark"" href=""./{person}"">
+                                <button type=""button"" class=""list-group-item list-group-item-action"">{person}</button>
+                            </a>
+                            ";
+            }
+
+            final += $@"<ol class=""list-group list-group-numbered"">
+                            <a class=""rounded text-decoration-none py-2"" data-bs-toggle=""collapse"" href=""#{category.Key}Collapse"" role=""button"" aria-expanded=""false"" aria-controls=""multiCollapseExample1"">
+                                <li class=""list-group-item d-flex justify-content-between align-items-start"">
+                                    <div class=""ms-2 me-auto"">
+                                        <div class=""fw-bold"">{category.Key}</div>
+                                        Zobacz listę
+                                    </div>
+                                    <span class=""badge bg-primary rounded-pill"">{category.Value.Length}</span>
+                                </li>
+                            </a>
+
+                            <div class=""row"">
+                                <div class=""col"">
+                                    <div class=""collapse multi-collapse rounded"" id=""{category.Key}Collapse"">
+                                        {persons}
+                                    </div>
+                                </div>
+                            </div>
+                        </ol>
+                        ";
+        }
+        
+        mainLayout = mainLayout.Replace(results[0].ToString(), final);
+
+        string results1 = results[1].ToString();
+        int indexPage = mainLayout.IndexOf(results1);
+        mainLayout = mainLayout.Remove(indexPage, results1.Length);
+
+        Directory.Delete("./Final/", true);
+        Directory.CreateDirectory("./Final/");
+
+        CopyFilesRecursively("./Copy/wwwroot/", "./Final/");
+
+        Console.WriteLine("Creating main pages");
+        Console.WriteLine("Index");
+
+        string index = File.ReadAllText("./Copy/Views/Home/Index.cshtml");
+
+        string indexFinal = mainLayout.Insert(indexPage, index);
+
+        File.WriteAllText("./Final/index.html", indexFinal);
+    }
+    
+    private static void CopyFilesRecursively(string sourcePath, string targetPath)
+    {
+        //Now Create all of the directories
+        foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+        {
+            Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+        }
+
+        //Copy all the files & Replaces any files with the same name
+        foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+        {
+            File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+        }
+    }
+}
