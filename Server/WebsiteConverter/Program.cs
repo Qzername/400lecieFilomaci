@@ -5,24 +5,24 @@ using System.Text.RegularExpressions;
 
 public class Program
 {
-
-    static HttpClient client = new HttpClient();
+	static HttpClient client = new HttpClient();
+	private static string website = "http://127.0.0.1:5000";
 
     public static void Main()
     {
         Console.WriteLine("Website Converter");
         CopyFilesRecursively("./Copy/wwwroot/", "./Final/");
 
-        DownloadPage("http://20.25.191.186:5000/");
-        DownloadPage("http://20.25.191.186:5000/Map");
-        DownloadPage("http://20.25.191.186:5000/List/Osoby");
-        DownloadPage("http://20.25.191.186:5000/List/Miejsca");
+        DownloadPage(website);
+        DownloadPage($"{website}/Map");
+        DownloadPage($"{website}/List/Osoby");
+        DownloadPage($"{website}/List/Miejsca");
 
         var categories = Database.GetCategoryAndPersons();
 
         foreach (var category in categories) 
             foreach(var person in category.Value)
-                DownloadPage($"http://20.25.191.186:5000/Person/{person}");
+                DownloadPage($"{website}/Person/{person}");
 
         //special case
         string css = File.ReadAllText("./Final/css/main.css");
@@ -35,7 +35,7 @@ public class Program
         var response = client.GetAsync(url).Result;
         string result = response.Content.ReadAsStringAsync().Result;
 
-        url = url.Remove(0, "http://20.25.191.186:5000".Length);
+        url = url.Remove(0, website.Length);
 
         if (url == "/")
             url = "/index";

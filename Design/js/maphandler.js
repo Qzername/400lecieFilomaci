@@ -49,3 +49,9 @@ Ceynowy.bindPopup("<b>Pomnik Floriana Ceynowy</b><br><a href=\"/400lecie/Person/
 
 var Wagner = L.marker([53.69705, 17.56038]).addTo(map);
 Wagner.bindPopup("<b>Mieszkanie Leona Wagnera</b><br><a href=\"/400lecie/Person/Leon%20Wagner.html\">Zobacz więcej...</a>").openPopup();
+
+var Aula = L.marker([53.69564, 17.56397]).addTo(map);
+Aula.bindPopup("<b>Aula</b><br><a href=\"/400lecie/Person/Aula.html\">Zobacz więcej...</a>").openPopup();
+
+var Wolszlegier = L.marker([53.6972, 17.56928]).addTo(map);
+Wolszlegier.bindPopup("<b>Grób ks. Antoniego Wolszlegiera</b><br><a href=\"/400lecie/Person/Antoni%20Wolszlegier.html\">Zobacz więcej...</a>").openPopup();

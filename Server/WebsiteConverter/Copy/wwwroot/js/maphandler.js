@@ -20,7 +20,7 @@ StarySzpital.bindPopup("<b>Stary szpital</b><br><a href=\"/400lecie/Person/Stary
 var HistoriaSzkoly = L.marker([53.69595, 17.56357]).addTo(map);
 HistoriaSzkoly.bindPopup("<b>Historia szkoły</b><br><a href=\"/400lecie/Person/Historia%20szkoły.html\">Zobacz więcej...</a>").openPopup();
 
-var LasekMiejski = L.marker([53.7105, 17.5621]).addTo(map);
+var LasekMiejski = L.marker([53.7086, 17.5596]).addTo(map);
 LasekMiejski.bindPopup("<b>Lasek miejski</b><br><a href=\"/400lecie/Person/Lasek%20Miejski%20w%20Chojnicach.html\">Zobacz więcej...</a>").openPopup();
 
 var DolinaSmierci = L.marker([53.7119, 17.5684]).addTo(map);
@@ -49,3 +49,9 @@ Ceynowy.bindPopup("<b>Pomnik Floriana Ceynowy</b><br><a href=\"/400lecie/Person/
 
 var Wagner = L.marker([53.69705, 17.56038]).addTo(map);
 Wagner.bindPopup("<b>Mieszkanie Leona Wagnera</b><br><a href=\"/400lecie/Person/Leon%20Wagner.html\">Zobacz więcej...</a>").openPopup();
+
+var Aula = L.marker([53.69564, 17.56397]).addTo(map);
+Aula.bindPopup("<b>Aula</b><br><a href=\"/400lecie/Person/Aula.html\">Zobacz więcej...</a>").openPopup();
+
+var Wolszlegier = L.marker([53.6972, 17.56928]).addTo(map);
+Wolszlegier.bindPopup("<b>Grób ks. Antoniego Wolszlegiera</b><br><a href=\"/400lecie/Person/Antoni%20Wolszlegier.html\">Zobacz więcej...</a>").openPopup();
